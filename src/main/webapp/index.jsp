@@ -11,7 +11,7 @@
     <h2>Application Version 1</h2>
 
     <p>
-        Successfully deployed using GitHub Actions and Apache Tomcat.
+        Feature branch CI validation test.
     </p>
 
 </body>
