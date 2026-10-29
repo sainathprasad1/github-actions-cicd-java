@@ -13,8 +13,7 @@ on:
       - develop
 
 jobs:
-
-    build-and-test:
+  build-and-test:
     name: Build and Test
     runs-on: ubuntu-latest
 
@@ -23,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Java 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
@@ -37,6 +36,8 @@ jobs:
         with:
           name: demo-app-war
           path: target/demo-app.war
+          if-no-files-found: error
+          retention-days: 7
 
   deploy:
     name: Deploy to Production
